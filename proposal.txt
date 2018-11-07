@@ -1,0 +1,34 @@
+Working title: The Essentials Location App
+
+Team members: 
+Cody Davis: Front end, HTML/CSS
+Thuy Dihn: Back end  
+Abraham Munoz: Back end
+Alex Stockton: Front end developer 
+Julian Montejano: Back end/ Github guru
+
+Short Description:  
+App intended for users looking for basic information on a given area.  Info includes locations for basics like
+hospitals, local groceries, schools, post offices, and gas stations.  User will input initial location, will be 
+set to city, address or both.  Request will return up to 5 results showing the user where the essentials are located.
+
+Core Apis:
+maps api
+weather
+
+Icebox:
+events news
+reviews
+health
+
+Tasks: 
+
+
+HTML/CSS: Skeleton build of website/ be sure to include elements that will be permanent.  Bootstrap for usability, all team members are versed in it.
+
+Front end: Code to generate elements that will occupy the container of the webpage.  First idea will be expandable cards
+each card will hold a limited array of results retrieved from the api.  Results should show location, addr
+
+Back end: Code to make data requests from the listed api's, 
+the responses should navigate to the data needed for front end to display data to the user.  Returns will be dynamic for what is being searched.
+EX resturants should have a variety, no need for a huge amount of post offices.
