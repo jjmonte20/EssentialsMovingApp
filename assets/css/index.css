@@ -1,3 +1,7 @@
-h1{
-    color: green;
+#navbar {
+    margin-bottom: 16px;
+}
+
+.card{
+    margin: 16px;
 }
