@@ -2,13 +2,31 @@
 
 // Let's start by getting varibles for what the requests are from the user
 
-var userQuery = $("#userInput").val();
+
+
+$(document.body).on("click", ".btn",function(){
+
+    var userInput = $("#userInput").val().trim();
+    var usrInp = userInput.replace(/ /gi, "+");
+
+    console.log(userInput);
+    console.log(usrInp);
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=" + usrInp + "&inputtype=textquery&radius=5000" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    console.log(queryUrl);
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+    })
+});
 
 // This value should be whatever the user types, best practice would be to be as specific as possible, but we need 
 // to have this autocomplete in case the user mispells the place they're looking for or they look at something that's 
 // not super specific
 
-
+/*
 $(".btn").on("click", function(){
 
     //need to define query url here, so that it is determined when the user presses the button
@@ -27,3 +45,4 @@ $(".btn").on("click", function(){
             console.log(results);
         })
 })
+*/
