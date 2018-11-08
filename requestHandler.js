@@ -7,11 +7,13 @@
 $(document.body).on("click", ".btn",function(){
 
     var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
+    // var btnInput = $(this).attr("data-name");
     var usrInp = userInput.replace(/ /gi, "+");
 
     console.log(userInput);
     console.log(usrInp);
-    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=" + usrInp + "&inputtype=textquery&radius=5000" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=gas+stations+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
     console.log(queryUrl);
 
     $.ajax({
@@ -19,7 +21,73 @@ $(document.body).on("click", ".btn",function(){
         method: "GET"
     }).then(function(response) {
         console.log(response);
-    })
+    });
+    var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
+    // var btnInput = $(this).attr("data-name");
+    var usrInp = userInput.replace(/ /gi, "+");
+
+    console.log(userInput);
+    console.log(usrInp);
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=hospitals+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    console.log(queryUrl);
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+    });
+    var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
+    // var btnInput = $(this).attr("data-name");
+    var usrInp = userInput.replace(/ /gi, "+");
+
+    console.log(userInput);
+    console.log(usrInp);
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=schools+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    console.log(queryUrl);
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+    });
+    var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
+    // var btnInput = $(this).attr("data-name");
+    var usrInp = userInput.replace(/ /gi, "+");
+
+    console.log(userInput);
+    console.log(usrInp);
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=grocery+stores+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    console.log(queryUrl);
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+    });
+    var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
+    // var btnInput = $(this).attr("data-name");
+    var usrInp = userInput.replace(/ /gi, "+");
+
+    console.log(userInput);
+    console.log(usrInp);
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=post+offices+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    console.log(queryUrl);
+
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+    });
+
+    
 });
 
 // This value should be whatever the user types, best practice would be to be as specific as possible, but we need 
