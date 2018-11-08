@@ -2,6 +2,31 @@
     margin-bottom: 16px;
 }
 
+.welcome-bar{
+    margin: 16px;
+    background-color: teal;
+    color: white;
+    min-height: 375px;
+}
+.welcome-bar div{
+    display: inline-block;
+    margin: 16px;
+}
 .card{
     margin: 16px;
+}
+
+.category-card{
+    margin: 16px;
+    border-radius: 10px;
+}
+.category-bar{
+    background-color: teal;
+    color: white;
+}
+
+.location-card{
+    margin: 8px;
+    max-width: 250px;
+    background-color: #ddd;
 }
