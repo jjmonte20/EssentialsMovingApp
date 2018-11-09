@@ -20,11 +20,28 @@ $(document.body).on("click", ".btn",function(){
     }).then(function(response) {
             //storing response.results into a variable to make it easier on myself
             var myResults = response.results;
+            console.log(myResults);
 
             //cutting the results to 5
             myResults.length = 5;
 
+
+
         for (var i = 0; i < myResults.length; i++){
+            var photoRef;
+
+            if (myResults[i].photos) {
+                photoRef = myResults[i].photos[0].photo_reference;
+                console.log("https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc");
+                $.ajax({
+                    url: "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc",
+                    method: "GET"
+                }).then(function(phoResponse, status, xhr){
+                   // console.log(phoResponse);
+                   var photoUrl = xhr.getResponseHeader("X-Final-Url");
+
+                })
+            }
 
             //create a div
             var rDiv = $("<div>");
@@ -35,11 +52,14 @@ $(document.body).on("click", ".btn",function(){
             // create text for the result item's address
             var p = $("<p>").text("Address: " + address);
 
+            // creating a variable for the image tag
+            var placeImg = $("<img>");
+
             // append the paragraph
             rDiv.append(p);
 
             // append so that the first items on the list show first
-            $(".resultsHere").prepend(rDiv);
+            $(".gasStations").append(rDiv);
             
         }
         console.log(myResults);
@@ -48,160 +68,160 @@ $(document.body).on("click", ".btn",function(){
 
     //These work, please uncomment 1 additional one to test that the results can show on multiple cards, then uncomment all when we know it works on all of them
 
-    var userInput = $("#userInput").val().trim();
-    var usrInp = userInput.replace(/ /gi, "+");
+    // var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
 
-    console.log(userInput);
-    console.log(usrInp);
-    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=hospitals+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
-    console.log(queryUrl);
+    // console.log(userInput);
+    // console.log(usrInp);
+    // var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=hospitals+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    // console.log(queryUrl);
 
-    $.ajax({
-        url: queryUrl,
-        method: "GET"
-    }).then(function(response) {
+    // $.ajax({
+    //     url: queryUrl,
+    //     method: "GET"
+    // }).then(function(response) {
 
-        var myResults = response.results;
+    //     var myResults = response.results;
 
-        myResults.length = 5
+    //     myResults.length = 5
 
-        for (var i = 0; i < myResults.length; i++){
+    //     for (var i = 0; i < myResults.length; i++){
 
-            //create a div
-            var rDiv = $("<div>");
+    //         //create a div
+    //         var rDiv = $("<div>");
 
-            //store div address
-            var address = myResults[i].formatted_address;
+    //         //store div address
+    //         var address = myResults[i].formatted_address;
 
-            // create text for the result item's address
-            var p = $("<p>").text("Address: " + address);
+    //         // create text for the result item's address
+    //         var p = $("<p>").text("Address: " + address);
 
-            // append the paragraph
-            rDiv.append(p);
+    //         // append the paragraph
+    //         rDiv.append(p);
 
-            // append so that the first items on the list show first
-            $(".resultsHere").prepend(rDiv);
+    //         // append so that the first items on the list show first
+    //         $(".resultsHere").prepend(rDiv);
            
-        }
-        console.log(myResults);
-    });
+    //     }
+    //     console.log(myResults);
+    // });
 
 
-    var userInput = $("#userInput").val().trim();
-    var usrInp = userInput.replace(/ /gi, "+");
+    // var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
 
-    console.log(userInput);
-    console.log(usrInp);
-    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=schools+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
-    console.log(queryUrl);
+    // console.log(userInput);
+    // console.log(usrInp);
+    // var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=schools+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    // console.log(queryUrl);
 
-    $.ajax({
-        url: queryUrl,
-        method: "GET"
-    }).then(function(response) {
+    // $.ajax({
+    //     url: queryUrl,
+    //     method: "GET"
+    // }).then(function(response) {
         
-        var myResults = response.results;
+    //     var myResults = response.results;
 
-        myResults.length = 5
+    //     myResults.length = 5
 
-        for (var i = 0; i < myResults.length; i++){
+    //     for (var i = 0; i < myResults.length; i++){
 
-            //create a div
-            var rDiv = $("<div>");
+    //         //create a div
+    //         var rDiv = $("<div>");
 
-            //store div address
-            var address = myResults[i].formatted_address;
+    //         //store div address
+    //         var address = myResults[i].formatted_address;
 
-            // create text for the result item's address
-            var p = $("<p>").text("Address: " + address);
+    //         // create text for the result item's address
+    //         var p = $("<p>").text("Address: " + address);
 
-            // append the paragraph
-            rDiv.append(p);
+    //         // append the paragraph
+    //         rDiv.append(p);
 
-            // append so that the first items on the list show first
-            $(".resultsHere").prepend(rDiv);
+    //         // append so that the first items on the list show first
+    //         $(".resultsHere").prepend(rDiv);
            
-        }
-        console.log(myResults);
-    });
+    //     }
+    //     console.log(myResults);
+    // });
 
 
-    var userInput = $("#userInput").val().trim(); 
-    var usrInp = userInput.replace(/ /gi, "+");
+    // var userInput = $("#userInput").val().trim(); 
+    // var usrInp = userInput.replace(/ /gi, "+");
 
-    console.log(userInput);
-    console.log(usrInp);
-    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=grocery+stores+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
-    console.log(queryUrl);
+    // console.log(userInput);
+    // console.log(usrInp);
+    // var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=grocery+stores+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    // console.log(queryUrl);
 
-    $.ajax({
-        url: queryUrl,
-        method: "GET"
-    }).then(function(response) {
+    // $.ajax({
+    //     url: queryUrl,
+    //     method: "GET"
+    // }).then(function(response) {
 
-        var myResults = response.results;
+    //     var myResults = response.results;
 
-        myResults.length = 5
+    //     myResults.length = 5
 
-        for (var i = 0; i < myResults.length; i++){
+    //     for (var i = 0; i < myResults.length; i++){
 
-            //create a div
-            var rDiv = $("<div>");
+    //         //create a div
+    //         var rDiv = $("<div>");
 
-            //store div address
-            var address = myResults[i].formatted_address;
+    //         //store div address
+    //         var address = myResults[i].formatted_address;
 
-            // create text for the result item's address
-            var p = $("<p>").text("Address: " + address);
+    //         // create text for the result item's address
+    //         var p = $("<p>").text("Address: " + address);
 
-            // append the paragraph
-            rDiv.append(p);
+    //         // append the paragraph
+    //         rDiv.append(p);
 
-            // append so that the first items on the list show first
-            $(".resultsHere").prepend(rDiv);
+    //         // append so that the first items on the list show first
+    //         $(".resultsHere").prepend(rDiv);
            
-        }
-        console.log(myResults);
-    });
+    //     }
+    //     console.log(myResults);
+    // });
 
 
-    var userInput = $("#userInput").val().trim();
-    var usrInp = userInput.replace(/ /gi, "+");
+    // var userInput = $("#userInput").val().trim();
+    // var usrInp = userInput.replace(/ /gi, "+");
 
-    console.log(userInput);
-    console.log(usrInp);
-    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=post+offices+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
-    console.log(queryUrl);
+    // console.log(userInput);
+    // console.log(usrInp);
+    // var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=post+offices+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    // console.log(queryUrl);
 
-    $.ajax({
-        url: queryUrl,
-        method: "GET"
-    }).then(function(response) {
+    // $.ajax({
+    //     url: queryUrl,
+    //     method: "GET"
+    // }).then(function(response) {
         
-        var myResults = response.results;
+    //     var myResults = response.results;
 
-        myResults.length = 5
+    //     myResults.length = 5
 
-        for (var i = 0; i < myResults.length; i++){
+    //     for (var i = 0; i < myResults.length; i++){
 
-            //create a div
-            var rDiv = $("<div>");
+    //         //create a div
+    //         var rDiv = $("<div>");
 
-            //store div address
-            var address = myResults[i].formatted_address;
+    //         //store div address
+    //         var address = myResults[i].formatted_address;
 
-            // create text for the result item's address
-            var p = $("<p>").text("Address: " + address);
+    //         // create text for the result item's address
+    //         var p = $("<p>").text("Address: " + address);
 
-            // append the paragraph
-            rDiv.append(p);
+    //         // append the paragraph
+    //         rDiv.append(p);
 
-            // append so that the first items on the list show first
-            $(".resultsHere").prepend(rDiv);
+    //         // append so that the first items on the list show first
+    //         $(".resultsHere").prepend(rDiv);
            
-        }
-        console.log(myResults);
-    });
+    //     }
+    //     console.log(myResults);
+    // });
 
 // these are the closers for the on click function, do not touch   
 });
