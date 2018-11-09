@@ -8,6 +8,7 @@
     background-color: teal;
     color: white;
     min-height: 375px;
+    overflow: hidden;
 }
 .welcome-name {
     margin: 32px;
