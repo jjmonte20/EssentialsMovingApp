@@ -4,9 +4,10 @@
 
 
 
-$(document.body).on("click", ".btn",function(){
-
-    var userInput = $("#userInput").val().trim();
+$(document.body).on("click", ".btn",function(event){
+    
+    event.preventDefault();
+    var userInput = $("#inputLocation").val().trim();
     var usrInp = userInput.replace(/ /gi, "+");
 
     console.log(userInput);
@@ -32,13 +33,15 @@ $(document.body).on("click", ".btn",function(){
 
             if (myResults[i].photos) {
                 photoRef = myResults[i].photos[0].photo_reference;
-                console.log("https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc");
+                // console.log("https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc");
                 $.ajax({
                     url: "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc",
                     method: "GET"
                 }).then(function(phoResponse, status, xhr){
-                   // console.log(phoResponse);
+                //    console.log(phoResponse);
                    var photoUrl = xhr.getResponseHeader("X-Final-Url");
+                   console.log(photoUrl);
+                   
 
                 })
             }
@@ -52,8 +55,6 @@ $(document.body).on("click", ".btn",function(){
             // create text for the result item's address
             var p = $("<p>").text("Address: " + address);
 
-            // creating a variable for the image tag
-            var placeImg = $("<img>");
 
             // append the paragraph
             rDiv.append(p);
