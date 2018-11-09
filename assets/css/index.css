@@ -61,7 +61,13 @@
     max-width: 250px;
     background-color: #ddd;
 }
-
+@media only screen and (max-width: 583px){
+    .category-deck{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 @media only screen and (max-width: 500px) {
     body {
         min-width: 300px;
@@ -75,5 +81,10 @@
     }
     .welcome-map {
         margin: auto;
+    }
+    .category-deck{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
