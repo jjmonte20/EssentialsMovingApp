@@ -1,3 +1,58 @@
-h1{
-    color: green;
+#navbar {
+    margin-bottom: 16px;
+}
+
+.welcome-bar{
+    display: flex;
+    margin: 16px;
+    background-color: teal;
+    color: white;
+    min-height: 375px;
+}
+.welcome-name {
+    margin: 32px;
+    height: 100%;
+    width: 100%;
+}
+.welcome-bar div{
+    display: inline-block;
+}
+
+.welcome-map {
+    margin: 16px;
+    margin-left: auto;
+    align-self: center;
+    justify-self: right;
+}
+.card{
+    margin: 16px;
+}
+
+.category-card{
+    margin: 16px;
+    border-radius: 10px;
+}
+.category-bar{
+    background-color: teal;
+    color: white;
+
+    margin: 0;
+    font-size: 30px;
+    padding-left: 30px;
+}
+.category-button{
+    cursor: pointer;
+    color:#FFF;
+}
+.category-button:hover{
+    color: #ddd;
+}
+.category-deck{
+    background-color: #eee;
+}
+
+.location-card{
+    margin: 8px;
+    max-width: 250px;
+    background-color: #ddd;
 }
