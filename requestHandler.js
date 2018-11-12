@@ -4,7 +4,7 @@
 
 
 
-$(document.body).on("click", ".btn",function(event){
+$(document.body).on("click", "#submitButton",function(event){
     
     event.preventDefault();
     var userInput = $("#inputLocation").val().trim();
@@ -21,49 +21,80 @@ $(document.body).on("click", ".btn",function(event){
     }).then(function(response) {
             //storing response.results into a variable to make it easier on myself
             var myResults = response.results;
-            console.log(myResults);
+            // console.log(myResults);
 
             //cutting the results to 5
             myResults.length = 5;
+            console.log(myResults);
 
+        i=0;
+        function mkCard() {
+            console.log(i);
+        if (i < 5) {
+            console.log("test");
+            //create a div
+            var rDiv = $("<div>");
+            rDiv.attr("id","div"+i)
+            //store div address
+            var address = myResults[i].formatted_address;
+            var plName = myResults[i].name;
+            var rTing = myResults[i].rating;
 
+            // create text for the result item's address
+            var p = $("<p>").text(address);
 
-        for (var i = 0; i < myResults.length; i++){
-            var photoRef;
+            // create text for the result item's name
+            var Nm = $("<p>").text(plName);
+
+            var rate = $("<p>").text(rTing);
 
             if (myResults[i].photos) {
                 photoRef = myResults[i].photos[0].photo_reference;
                 // console.log("https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc");
                 $.ajax({
-                    url: "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc",
+                    url: "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/photo?maxheight=250&maxwidth=250&photoreference=" + photoRef + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc",
                     method: "GET"
                 }).then(function(phoResponse, status, xhr){
-                //    console.log(phoResponse);
                    var photoUrl = xhr.getResponseHeader("X-Final-Url");
-                   console.log(photoUrl);
-                   
+                   console.log(photoUrl); 
 
-                })
+                   placeImg = $("<img>");
+
+                   placeImg.attr("src", photoUrl);
+
+                    rDiv.append(Nm);
+                    rDiv.append(p);
+                    rDiv.append(rate);
+                    rDiv.append(placeImg);
+
+                    $(".gasStations").append(rDiv);
+                    i++;
+                    mkCard();
+                    })
+            } else {
+                // need a placeholder img
+                placeImg = $("<img>");
+
+                placeImg.attr("src", "https://via.placeholder.com/250");
+
+                rDiv.append(Nm);
+                rDiv.append(p);
+                rDiv.append(rate);
+                rDiv.append(placeImg);
+                $(".gasStations").append(rDiv);
+                i++;
+                mkCard();
             }
-
-            //create a div
-            var rDiv = $("<div>");
-
-            //store div address
-            var address = myResults[i].formatted_address;
-
-            // create text for the result item's address
-            var p = $("<p>").text("Address: " + address);
-
-
-            // append the paragraph
-            rDiv.append(p);
+            // use placeholder for else statement
 
             // append so that the first items on the list show first
-            $(".gasStations").append(rDiv);
-            
-        }
-        console.log(myResults);
+            // rDiv.append(p);
+            // rDiv.append(placeImg);
+
+            // $(".gasStations").append(rDiv);   
+    }      
+    }
+    mkCard();
     });
 
 

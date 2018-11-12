@@ -19,7 +19,7 @@
       <a class="navbar-brand">Essentals - whats in your area</a>
       <form class="form-inline">
         <input id="inputLocation" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button id="submitButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
     <div class = "welcome-bar">
@@ -29,14 +29,28 @@
       <div class="welcome-map">
         <img src="https://via.placeholder.com/450x350" class="">
       </div>
-      
     </div>
-
+    <div id = "hospitalDeck" class = "category-deck flex">
+        <div class = "location-card d-inline-block">
+          <div class = "location-title text-center">
+            <h4>Manchaca Post Office</h4>
+            <img src = "https://via.placeholder.com/250">
+          </div>
+          <div class = "location-address">121212 South Lamar Blvd. Manchaca, Texas 12345</div>
+          <div class = "location-distance text-center">about <span>5</span> miles.</div>
+        </div> <!-- end location Card-->
+        <!-- New Location-->
+        <div class = "location-card d-inline-block">
+          <div class = "location-title text-center">
+            <h4>Manchaca Post Office</h4>
+            <img src = "https://via.placeholder.com/250">
+          </div>
           <div class = "location-address">121212 South Lamar Blvd. Manchaca, Texas 12345</div>
           <div class = "location-distance text-center">about <span>5</span> miles.</div>
         </div> <!-- end location Card-->
       </div><!--end Hispital Deck-->
     </div><!--end category Card-->
+
 
     <div class = "category-card">
         <!-- title bar for category -->
@@ -86,7 +100,7 @@
         <div id = "unknownDeck" class = "category-deck flex">
         </div><!--end Hispital Deck-->
     </div><!--end category Card-->
-
+    <div class="gasStations"></div>
 
 
 
