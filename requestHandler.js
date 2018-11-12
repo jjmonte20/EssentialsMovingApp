@@ -32,9 +32,33 @@ $(document.body).on("click", "#submitButton",function(event){
             console.log(i);
         if (i < 5) {
             console.log("test");
-            //create a div
+
+            //create a div, since the cards need to be formatted, multiple divs are necessary
             var rDiv = $("<div>");
-            rDiv.attr("id","div"+i)
+            rDiv.attr("id","div"+i);
+            rDiv.attr("class", "location-card d-inline-block");
+
+            //need separate divs for title and image
+            var tDiv = $("<div>");
+
+            // giving the title is necessary in case the images are out of order
+            tDiv.attr("id","title"+i);
+            tDiv.attr("class", "location-title text-center");
+
+            //need a div for address
+            var aDiv = $("<div>");
+
+            // giving the address an id in case out of order as well
+            aDiv.attr("id", "address"+i);
+            aDiv.attr("class", "location-address text-center");
+
+            //need a div for rating
+            var rateDiv = $("<div>");
+
+            // id for rating
+            rateDiv.attr("id", "rating"+i);
+            rateDiv.attr("class", "location-rating text-center");
+
             //store div address
             var address = myResults[i].formatted_address;
             var plName = myResults[i].name;
@@ -44,9 +68,9 @@ $(document.body).on("click", "#submitButton",function(event){
             var p = $("<p>").text(address);
 
             // create text for the result item's name
-            var Nm = $("<p>").text(plName);
+            var Nm = $("<h4>").text(plName);
 
-            var rate = $("<p>").text(rTing);
+            var rate = $("<p>").text("Rating: "+rTing);
 
             if (myResults[i].photos) {
                 photoRef = myResults[i].photos[0].photo_reference;
@@ -61,12 +85,17 @@ $(document.body).on("click", "#submitButton",function(event){
                    placeImg = $("<img>");
 
                    placeImg.attr("src", photoUrl);
+                   placeImg.attr("height", "250");
+                   placeImg.attr("width", "250");
 
-                    rDiv.append(Nm);
-                    rDiv.append(p);
-                    rDiv.append(rate);
-                    rDiv.append(placeImg);
+                    tDiv.append(Nm);
+                    aDiv.append(p);
+                    rateDiv.append(rate);
+                    tDiv.append(placeImg);
 
+                    $(rDiv).append(tDiv);
+                    $(rDiv).append(aDiv);
+                    $(rDiv).append(rateDiv);
                     $(".gasStations").append(rDiv);
                     i++;
                     mkCard();
@@ -77,10 +106,14 @@ $(document.body).on("click", "#submitButton",function(event){
 
                 placeImg.attr("src", "https://via.placeholder.com/250");
 
-                rDiv.append(Nm);
-                rDiv.append(p);
-                rDiv.append(rate);
-                rDiv.append(placeImg);
+                tDiv.append(Nm);
+                aDiv.append(p);
+                rateDiv.append(rate);
+                tDiv.append(placeImg);
+
+                $(rDiv).append(tDiv);
+                $(rDiv).append(aDiv);
+                $(rDiv).append(rateDiv);
                 $(".gasStations").append(rDiv);
                 i++;
                 mkCard();
