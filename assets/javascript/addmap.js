@@ -25,7 +25,6 @@ function initMap() {
     event.preventDefault();
     // CALL MAP, TIME, WEATHER, NEWS OF INPUT LOCATION
     geocodeAddress(geocoder, map);
-    cardWork();
   });
 }
 
