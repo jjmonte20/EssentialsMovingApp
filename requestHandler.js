@@ -5,7 +5,12 @@
 
 
 $(document.body).on("click", "#submitButton",function(event){
-    
+
+    $(".gasStations").empty();
+    $(".hospitals").empty();
+    $(".schools").empty();
+    $(".groceryStores").empty();
+    $(".postOffices").empty();
     event.preventDefault();
     var userInput = $("#inputLocation").val().trim();
     var usrInp = userInput.replace(/ /gi, "+");
@@ -93,6 +98,11 @@ $(document.body).on("click", "#submitButton",function(event){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
+
+                    //empty code before it appends
+                    
+
+                    // appending the card before it is added to the page
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
@@ -110,6 +120,7 @@ $(document.body).on("click", "#submitButton",function(event){
                 aDiv.append(p);
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
+
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
@@ -217,6 +228,8 @@ $(document.body).on("click", "#submitButton",function(event){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
+                    // $(".hospitals").remove(rDiv);
+
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
@@ -234,6 +247,8 @@ $(document.body).on("click", "#submitButton",function(event){
                 aDiv.append(p);
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
+
+                // $(".hospitals").remove(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
@@ -341,6 +356,8 @@ $(document.body).on("click", "#submitButton",function(event){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
+                    // $(".schools").remove(rDiv);
+
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
@@ -358,6 +375,8 @@ $(document.body).on("click", "#submitButton",function(event){
                 aDiv.append(p);
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
+
+                // $(".schools").remove(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
@@ -465,6 +484,8 @@ $(document.body).on("click", "#submitButton",function(event){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
+                    // $(".groceryStore").remove(rDiv);
+
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
@@ -482,6 +503,8 @@ $(document.body).on("click", "#submitButton",function(event){
                 aDiv.append(p);
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
+
+                // $(".groceryStore").remove(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
@@ -589,6 +612,8 @@ $(document.body).on("click", "#submitButton",function(event){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
+                    // $(".postOffices").remove(rDiv);
+
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
@@ -606,6 +631,8 @@ $(document.body).on("click", "#submitButton",function(event){
                 aDiv.append(p);
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
+
+                // $(".postOffices").remove(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
