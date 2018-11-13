@@ -4,14 +4,14 @@
 
 
 
-$(document.body).on("click", "#submitButton",function(event){
-
+// $(document.body).on("click", "#submit",function(event)
+function cardWork(){
     $(".gasStations").empty();
     $(".hospitals").empty();
     $(".schools").empty();
     $(".groceryStores").empty();
     $(".postOffices").empty();
-    event.preventDefault();
+    
     var userInput = $("#inputLocation").val().trim();
     var usrInp = userInput.replace(/ /gi, "+");
 
@@ -141,7 +141,7 @@ $(document.body).on("click", "#submitButton",function(event){
     mkCard();
     });
 
-    event.preventDefault();
+
     var userInput = $("#inputLocation").val().trim();
     var usrInp = userInput.replace(/ /gi, "+");
 
@@ -655,4 +655,4 @@ $(document.body).on("click", "#submitButton",function(event){
 
 
 // these are the closers for the on click function, do not touch   
-});
+};
