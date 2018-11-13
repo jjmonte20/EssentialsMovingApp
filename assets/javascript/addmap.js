@@ -17,11 +17,12 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $("#submit").on('click', function() { // Information on Welcome Bar will change
+  $("#submit").on('click', function(event) { // Information on Welcome Bar will change
     if(marker != null) {            // check if there is any marker on map
       marker.setMap(null);          // clear all markers on map
       marker = null;                // set back marker is clear for new location
     }
+    event.preventDefault();
     // CALL MAP, TIME, WEATHER, NEWS OF INPUT LOCATION
     geocodeAddress(geocoder, map);
   });

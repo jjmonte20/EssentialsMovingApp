@@ -1,3 +1,8 @@
+$("#submit").on('click', function(event) {
+    cardWork();
+    document.getElementById('locationView').classList = "";
+});
+
 document.getElementById("hospitalBar").addEventListener('click', function(event){
     console.log(event);
         console.log ("bar touched");
