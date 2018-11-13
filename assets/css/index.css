@@ -7,12 +7,17 @@
     margin: 16px;
     background-color: teal;
     color: white;
-    min-height: 375px;
+    overflow: hidden;
 }
 .welcome-name {
     margin: 32px;
     height: 100%;
     width: 100%;
+}
+.welcome-map-object{
+    max-width: 100%;
+    max-height: auto;
+    min-width: 200px;
 }
 .welcome-bar div{
     display: inline-block;
@@ -57,4 +62,31 @@
     margin: 8px;
     max-width: 250px;
     background-color: #ddd;
+}
+@media only screen and (max-width: 583px){
+    .category-deck{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 500px) {
+    body {
+        min-width: 300px;
+    }
+    .welcome-bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .welcome-bar div{
+        display: block;
+    }
+    .welcome-map {
+        margin: auto;
+    }
+    .category-deck{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
