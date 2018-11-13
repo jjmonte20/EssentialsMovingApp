@@ -1,3 +1,17 @@
+/* Optional: Makes the sample page fill the window.*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: teal;
+}
+
+#map {
+    width: 400px;
+    height: 500px;
+    float: right;
+}
+
 #navbar {
     margin-bottom: 16px;
 }
@@ -9,26 +23,12 @@
     color: white;
     overflow: hidden;
 }
-.welcome-name {
-    margin: 32px;
-    height: 100%;
-    width: 100%;
-}
-.welcome-map-object{
-    max-width: 100%;
-    max-height: auto;
-    min-width: 200px;
-}
-.welcome-bar div{
-    display: inline-block;
+
+h1 {
+    margin: 10px;
+    text-align: center
 }
 
-.welcome-map {
-    margin: 16px;
-    margin-left: auto;
-    align-self: center;
-    justify-self: right;
-}
 .card{
     margin: 16px;
 }
@@ -37,6 +37,7 @@
     margin: 16px;
     border-radius: 10px;
 }
+
 .category-bar{
     background-color: teal;
     color: white;
@@ -45,17 +46,18 @@
     font-size: 30px;
     padding-left: 30px;
 }
+
 .category-button{
     cursor: pointer;
     color:#FFF;
 }
+
 .category-button:hover{
     color: #ddd;
 }
+
 .category-deck{
     background-color: #eee;
-    transition-duration: 1s;
-    overflow:hidden;
 }
 
 .location-card{
@@ -63,6 +65,7 @@
     max-width: 250px;
     background-color: #ddd;
 }
+
 @media only screen and (max-width: 583px){
     .category-deck{
         display: flex;
@@ -70,6 +73,7 @@
         justify-content: center;
     }
 }
+
 @media only screen and (max-width: 500px) {
     body {
         min-width: 300px;
