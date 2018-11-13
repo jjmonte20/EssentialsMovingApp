@@ -40,30 +40,39 @@ h1 {
 
 .category-bar{
     background-color: teal;
-    color: white;
+    color: #fff;
 
     margin: 0;
     font-size: 30px;
     padding-left: 30px;
-}
-
-.category-button{
     cursor: pointer;
-    color:#FFF;
 }
 
-.category-button:hover{
+.category-bar:hover{
     color: #ddd;
 }
 
 .category-deck{
     background-color: #eee;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .location-card{
     margin: 8px;
     max-width: 250px;
     background-color: #ddd;
+}
+
+.accordian{
+    max-height: 9999px;
+    transition: max-height .6s;
+    overflow:hidden;
+}
+.accordian-fold {
+    max-height: 0;
+    transition: max-height .6s;
 }
 
 @media only screen and (max-width: 583px){
