@@ -6,11 +6,11 @@
 
 // $(document.body).on("click", "#submit",function(event)
 function cardWork(){
-    $(".gasStations").empty();
-    $(".hospitals").empty();
-    $(".schools").empty();
-    $(".groceryStores").empty();
-    $(".postOffices").empty();
+    $("#gasDeck").empty();
+    $("#hospitalDeck").empty();
+    $("#libraryDeck").empty();
+    $("#groceryDeck").empty();
+    $("#postofficeDeck").empty();
     
     var userInput = $("#inputLocation").val().trim();
     var usrInp = userInput.replace(/ /gi, "+");
@@ -106,7 +106,7 @@ function cardWork(){
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $(".gasStations").append(rDiv);
+                    $("#gasDeck").append(rDiv);
                     i++;
                     mkCard();
                     })
@@ -125,7 +125,7 @@ function cardWork(){
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $(".gasStations").append(rDiv);
+                $("#gasDeck").append(rDiv);
                 i++;
                 mkCard();
             }
@@ -233,7 +233,7 @@ function cardWork(){
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $(".hospitals").append(rDiv);
+                    $("#hospitalDeck").append(rDiv);
                     j++;
                     mkCard1();
                     })
@@ -253,7 +253,7 @@ function cardWork(){
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $(".hospitals").append(rDiv);
+                $("#hospitalDeck").append(rDiv);
                 j++;
                 mkCard1();
             }
@@ -275,7 +275,7 @@ function cardWork(){
 
     console.log(userInput);
     console.log(usrInp);
-    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=schools+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
+    var queryUrl = "https://cors-ut-bootcamp.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?input=libraries+near+" + usrInp + "&inputtype=textquery&radius=5000&" + "&key=AIzaSyCov3eDZmkrwgdqlChL-1PJVDcwaQfpTBc";
     console.log(queryUrl);
 
     $.ajax({
@@ -361,7 +361,7 @@ function cardWork(){
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $(".schools").append(rDiv);
+                    $("#libraryDeck").append(rDiv);
                     k++;
                     mkCard2();
                     })
@@ -381,7 +381,7 @@ function cardWork(){
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $(".schools").append(rDiv);
+                $("#libraryDeck").append(rDiv);
                 k++;
                 mkCard2();
             }
@@ -489,7 +489,7 @@ function cardWork(){
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $(".groceryStores").append(rDiv);
+                    $("#groceryDeck").append(rDiv);
                     l++;
                     mkCard3();
                     })
@@ -509,7 +509,7 @@ function cardWork(){
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $(".groceryStores").append(rDiv);
+                $("#groceryDeck").append(rDiv);
                 l++;
                 mkCard3();
             }
@@ -617,7 +617,7 @@ function cardWork(){
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $(".postOffices").append(rDiv);
+                    $("#postofficeDeck").append(rDiv);
                     m++;
                     mkCard4();
                     })
@@ -637,7 +637,7 @@ function cardWork(){
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $(".postOffices").append(rDiv);
+                $("#postofficeDeck").append(rDiv);
                 m++;
                 mkCard4();
             }
