@@ -1,6 +1,8 @@
-$("#submit").on('click', function(event) {
+
+$("#search-form").on('submit', function(event) {
+    event.preventDefault();
     cardWork();
-    document.getElementById('locationView').classList = "";
+    document.getElementById('locationView').classList = ""; 
 });
 
 document.getElementById("hospitalBar").addEventListener('click', function(event){
