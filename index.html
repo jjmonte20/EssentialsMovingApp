@@ -28,127 +28,113 @@
       <a class="navbar-brand">Essentals - whats in your area</a>
       <form class="form-inline">
         <input id="inputLocation" class="form-control mr-sm-2" type="textbox" placeholder="Search" aria-label="Search" value="Austin, Texas">
-        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit">Search</button> -->
         <input class="btn btn-outline-success my-2 my-sm-0" type="button" id="submit" value="Search">
       </form>
     </nav>
-
-    <div class = "welcome-bar row">
-      <!-- Welcome info -->
-      <div class="col-md-6">
-        <h1>Wellcome to <span id="welcomeLocation">new home!</span></h1>
-        <div class = "row">
-          <!-- Create clock -->
-          <div class="col-md-6">
-            <article class="clock">
-              <div class="hours-container">
-                <div class="hours"></div>
-              </div>
-              <div class="minutes-container">
-                <div class="minutes"></div>
-              </div>
-              <div class="seconds-container">
-                <div class="seconds"></div>
-              </div>
-            </article>
-            <h6 class="timeZone">Time zone <span id="timeZoneID">at this location</span></h6>
-            <h6 id="timeZoneName"></h6>
-          </div>
-          <!-- Create weather and news box -->
-          <div class="col-md-6">
-              <br>
-              <h4 class="weather">Everyday is a beautiful day!</h4>
-              <h6 class="wind"></h6>
-              <h6 class="humidity"></h6>
-              <h6 class="temp"></h6>
-              <br>
-              <h4 class="news">And every life is a wonderful life!</h4>
-              <h6 class="newsTitle1"></h6>
-              <h6 class="newsTitle2"></h6>
-              <h6 class="newsTitle3"></h6>
+    <div id="locationView" class="d-none">
+      <div class = "welcome-bar row">
+        <!-- Welcome info -->
+        <div class="col-md-6">
+          <h1>Welcome to <span id="welcomeLocation">new home!</span></h1>
+          <div class = "row">
+            <!-- Create clock -->
+            <div class="col-md-6">
+              <article class="clock">
+                <div class="hours-container">
+                  <div class="hours"></div>
+                </div>
+                <div class="minutes-container">
+                  <div class="minutes"></div>
+                </div>
+                <div class="seconds-container">
+                  <div class="seconds"></div>
+                </div>
+              </article>
+              <h6 class="timeZone">Time zone <span id="timeZoneID">at this location</span></h6>
+              <h6 id="timeZoneName"></h6>
+            </div>
+            <!-- Create weather and news box -->
+            <div class="col-md-6">
+                <br>
+                <h4 class="weather">Everyday is a beautiful day!</h4>
+                <h6 class="wind"></h6>
+                <h6 class="humidity"></h6>
+                <h6 class="temp"></h6>
+                <br>
+                <h4 class="news">And every life is a wonderful life!</h4>
+                <h6 class="newsTitle1"></h6>
+                <h6 class="newsTitle2"></h6>
+                <h6 class="newsTitle3"></h6>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Add Google Map -->
-      <div id="map" class = "col-md-6"></div>
+        <!-- Add Google Map -->
+        <div id="map" class = "col-md-6"></div>
 
+      </div>
+
+      <div class = "category-card">
+        <!-- title bar for category-->
+        <div id = "hospitalBar" class = "category-bar">
+          <span id="btnHospital" class = "category-button">Hospitals</span>
+        </div>
+        <!-- start of deck-->
+        <div id = "hospitalDeck" class = "category-deck flex">
+          <!-- <div class = "location-card d-inline-block">
+            <div class = "location-title text-center">
+              <h4>Manchaca Post Office</h4>
+              <img src = "https://via.placeholder.com/250">
+            </div>
+            <div class = "location-address">121212 South Lamar Blvd. Manchaca, Texas 12345</div>
+            <div class = "location-distance text-center">about <span>5</span> miles.</div>
+          </div> end location Card -->
+          <!-- New Location-->
+        </div><!--end Hispital Deck-->
+      </div><!--end category Card-->
+
+      <div class = "category-card">
+          <!-- title bar for category -->
+          <div id = "postofficeBar" class = "category-bar">
+            <span id="btnPostoffice" class = "category-button">Post Office</span>
+          </div>
+          <!-- start of deck -->
+          <div id = "postofficeDeck" class = "category-deck flex">
+          </div><!--end Deck -->
+      </div><!-- end category Card -->
+
+      <!-- Library Category ------------------------------------------------------------------>
+      <div class = "category-card">
+          <!-- title bar for category -->
+          <div id = "libraryBar" class = "category-bar">
+            <span id="btnLibrary" class = "category-button">Library</span>
+          </div>
+          <!--start of deck-->
+          <div id = "libraryDeck" class = "category-deck flex">
+          </div><!--end Hispital Deck-->
+      </div><!--end category Card-->
+
+      <!-- Grocery Category-------------------------------------------------------------->
+      <div class = "category-card">
+          <!-- title bar for category -->
+          <div id = "groceryBar" class = "category-bar">
+            <span id="btnGrocery" class = "category-button">Grocery</span>
+          </div>
+          <!--start of deck-->
+          <div id = "groceryDeck" class = "category-deck flex">
+          </div><!--end Hispital Deck-->
+      </div><!--end category Card-->
+      <!-- <div class="gasStations"></div> -->
+      <!-- Gas Stations Category---------------------------------------------------------->
+      <div class = "category-card">
+          <!-- <title bar for category -->
+          <div id = "gasBar" class = "category-bar">
+            <span id="btnGas" class = "category-button">Gas Station</span>
+          </div>
+          <!--start of deck-->
+          <div id = "gasDeck" class = "category-deck flex">
+          </div><!--end Hispital Deck -->
+      </div> <!--end category Card -->
     </div>
-
-    <div class = "category-card">
-      <!-- title bar for category-->
-      <div id = "hospitalBar" class = "category-bar">
-        <span id="btnHospital" class = "category-button">Hospitals</span>
-      </div>
-      <!-- start of deck-->
-      <div id = "hospitalDeck" class = "category-deck flex">
-        <!-- <div class = "location-card d-inline-block">
-          <div class = "location-title text-center">
-            <h4>Manchaca Post Office</h4>
-            <img src = "https://via.placeholder.com/250">
-          </div>
-          <div class = "location-address">121212 South Lamar Blvd. Manchaca, Texas 12345</div>
-          <div class = "location-distance text-center">about <span>5</span> miles.</div>
-        </div> end location Card -->
-        <!-- New Location-->
-      </div><!--end Hispital Deck-->
-    </div><!--end category Card-->
-
-    <div class = "category-card">
-        <!-- title bar for category -->
-        <div id = "postofficeBar" class = "category-bar">
-          <span id="btnPostoffice" class = "category-button">Post Office</span>
-        </div>
-        <!-- start of deck -->
-        <div id = "postofficeDeck" class = "category-deck flex">
-        </div><!--end Deck -->
-    </div><!-- end category Card -->
-
-    <!-- Library Category ------------------------------------------------------------------>
-    <div class = "category-card">
-        <!-- title bar for category -->
-        <div id = "libraryBar" class = "category-bar">
-          <span id="btnLibrary" class = "category-button">Library</span>
-        </div>
-        <!--start of deck-->
-        <div id = "libraryDeck" class = "category-deck flex">
-        </div><!--end Hispital Deck-->
-    </div><!--end category Card-->
-
-    <!-- Grocery Category-------------------------------------------------------------->
-    <div class = "category-card">
-        <!-- title bar for category -->
-        <div id = "groceryBar" class = "category-bar">
-          <span id="btnGrocery" class = "category-button">Grocery</span>
-        </div>
-        <!--start of deck-->
-        <div id = "groceryDeck" class = "category-deck flex">
-        </div><!--end Hispital Deck-->
-    </div><!--end category Card-->
-    <!-- <div class="gasStations"></div> -->
-    <!-- Gas Stations Category---------------------------------------------------------->
-    <div class = "category-card">
-        <!-- <title bar for category -->
-        <div id = "gasBar" class = "category-bar">
-          <span id="btnGas" class = "category-button">Gas Station</span>
-        </div>
-        <!--start of deck-->
-        <div id = "gasDeck" class = "category-deck flex">
-        </div><!--end Hispital Deck -->
-    </div> <!--end category Card -->
-
-    <!-- Unknown / blank category for future development--------------------------------->
-    <div class = "category-card">
-        <!-- title bar for category -->
-        <div id = "unknownBar" class = "category-bar">
-          <span id="btn-unknown" class = "category-button">Unknown</span>
-        </div>
-        <!--start of deck-->
-        <div id = "unknownDeck" class = "category-deck flex">
-        </div><!--end Hispital Deck-->
-    </div>end category Card
-    
-
-
     <script type="text/javascript" src="assets/javascript/addmap.js"></script>
     <script type="text/javascript" src="requestHandler.js"></script>
     <script async defer

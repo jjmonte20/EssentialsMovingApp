@@ -58,6 +58,8 @@ h1 {
 
 .category-deck{
     background-color: #eee;
+    display: flex;
+    align-items: flex-start;
 }
 
 .location-card{
