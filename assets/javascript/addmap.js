@@ -103,9 +103,12 @@ function setNews(address) {
       console.log(response);      // Log the resulting object
       console.log(response.articles[0].title);
       $(".news").text("Headline news :");     // Transfer content to HTML
-      $(".newsTitle1").text(response.articles[0].title);
-      $(".newsTitle2").text(response.articles[1].title);
-      $(".newsTitle3").text(response.articles[2].title);
+      // $(".newsTitle1").text(response.articles[0].title);
+      // $(".newsTitle2").text(response.articles[1].title);
+      // $(".newsTitle3").text(response.articles[2].title);
+      $(".newsTitle1").html('<a href="' + response.articles[0].url + '" target="_blank">' + response.articles[0].title + '</a>');
+      $(".newsTitle2").html('<a href="' + response.articles[1].url + '" target="_blank">' + response.articles[1].title + '</a>');
+      $(".newsTitle3").html('<a href="' + response.articles[2].url + '" target="_blank">' + response.articles[2].title + '</a>');
     });
 }
 
