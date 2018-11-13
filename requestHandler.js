@@ -93,20 +93,21 @@ function cardWork(){
                    placeImg.attr("height", "250");
                    placeImg.attr("width", "250");
 
+                    
                     tDiv.append(Nm);
                     aDiv.append(p);
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
-
                     //empty code before it appends
-                    
+                    var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                    anchor.append(rDiv);
 
                     // appending the card before it is added to the page
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $("#gasDeck").append(rDiv);
+                    $("#gasDeck").append(anchor);
                     i++;
                     mkCard();
                     })
@@ -121,11 +122,13 @@ function cardWork(){
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
 
+                var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                anchor.append(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $("#gasDeck").append(rDiv);
+                $("#gasDeck").append(anchor);
                 i++;
                 mkCard();
             }
@@ -228,12 +231,13 @@ function cardWork(){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
-                    // $(".hospitals").remove(rDiv);
+                    var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                    anchor.append(rDiv);
 
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $("#hospitalDeck").append(rDiv);
+                    $("#hospitalDeck").append(anchor);
                     j++;
                     mkCard1();
                     })
@@ -248,12 +252,13 @@ function cardWork(){
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
 
-                // $(".hospitals").remove(rDiv);
+                var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                anchor.append(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $("#hospitalDeck").append(rDiv);
+                $("#hospitalDeck").append(anchor);
                 j++;
                 mkCard1();
             }
@@ -356,12 +361,13 @@ function cardWork(){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
-                    // $(".schools").remove(rDiv);
+                    var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                    anchor.append(rDiv);
 
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $("#libraryDeck").append(rDiv);
+                    $("#libraryDeck").append(anchor);
                     k++;
                     mkCard2();
                     })
@@ -376,12 +382,13 @@ function cardWork(){
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
 
-                // $(".schools").remove(rDiv);
+                var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                anchor.append(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $("#libraryDeck").append(rDiv);
+                $("#libraryDeck").append(anchor);
                 k++;
                 mkCard2();
             }
@@ -484,12 +491,13 @@ function cardWork(){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
-                    // $(".groceryStore").remove(rDiv);
+                    var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                    anchor.append(rDiv);
 
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $("#groceryDeck").append(rDiv);
+                    $("#groceryDeck").append(anchor);
                     l++;
                     mkCard3();
                     })
@@ -504,12 +512,13 @@ function cardWork(){
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
 
-                // $(".groceryStore").remove(rDiv);
+                var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                anchor.append(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $("#groceryDeck").append(rDiv);
+                $("#groceryDeck").append(anchor);
                 l++;
                 mkCard3();
             }
@@ -612,12 +621,13 @@ function cardWork(){
                     rateDiv.append(rate);
                     tDiv.append(placeImg);
 
-                    // $(".postOffices").remove(rDiv);
+                    var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                    anchor.append(rDiv);
 
                     $(rDiv).append(tDiv);
                     $(rDiv).append(aDiv);
                     $(rDiv).append(rateDiv);
-                    $("#postofficeDeck").append(rDiv);
+                    $("#postofficeDeck").append(anchor);
                     m++;
                     mkCard4();
                     })
@@ -632,12 +642,13 @@ function cardWork(){
                 rateDiv.append(rate);
                 tDiv.append(placeImg);
 
-                // $(".postOffices").remove(rDiv);
+                var anchor = $("<a href='https://www.google.com/maps/search/" + address + "' target='_blank'></a>")
+                anchor.append(rDiv);
 
                 $(rDiv).append(tDiv);
                 $(rDiv).append(aDiv);
                 $(rDiv).append(rateDiv);
-                $("#postofficeDeck").append(rDiv);
+                $("#postofficeDeck").append(anchor);
                 m++;
                 mkCard4();
             }
