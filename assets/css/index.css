@@ -54,6 +54,8 @@
 }
 .category-deck{
     background-color: #eee;
+    transition-duration: 1s;
+    overflow:hidden;
 }
 
 .location-card{
