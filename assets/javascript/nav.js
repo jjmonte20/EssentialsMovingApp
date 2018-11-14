@@ -37,8 +37,7 @@ document.getElementById("groceryBar").addEventListener('click', function(event){
         document.getElementById("groceryDeck").classList.toggle('accordian-fold');
 });
 document.getElementById("gasBar").addEventListener('click', function(event){
-
-        document.getElementById("gasDeck").classList.toggle('collapse');
+        document.getElementById("gasDeck").classList.toggle('accordian-fold');
 
 });
 
