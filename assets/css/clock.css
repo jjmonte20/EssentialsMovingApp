@@ -82,25 +82,20 @@
   animation: rotate 43200s infinite linear;
 }
 
-.minutes-container {
+/*.minutes-container {
   animation: rotate 3600s infinite linear;
 }
 
 .seconds-container {
   animation: rotate 60s infinite linear;
-}
+}*/
 
-/*.minutes-container {
+.minutes-container {
   animation: rotate 3600s infinite steps(60);
 }
 
 .seconds-container {
   animation: rotate 60s infinite steps(60);
 }
-*/
-/*.minutes-container {
-  transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
-}
-.seconds-container {
-  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
-}*/
+
+
