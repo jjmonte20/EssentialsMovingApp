@@ -5,15 +5,17 @@ var marker = null; // set icon of location marker clear
 $("#search-form").on('submit', function(event) {
     event.preventDefault();
     googleQuery();
-    document.getElementById('locationView').classList = "";
-    document.getElementById('splashScreen').style.display="none";
+    initMap();
+    initLocalClocks(currentDate);
+    document.getElementById('locationView').classList = ""; 
 });
 
 document.getElementById("submit").addEventListener('click', function(event){
         event.preventDefault();
     googleQuery();
-    document.getElementById('locationView').classList = "";
-    document.getElementById('splashScreen').style.display="none";    
+    initMap();
+    initLocalClocks(currentDate);
+    document.getElementById('locationView').classList = "";    
 });
 
 
