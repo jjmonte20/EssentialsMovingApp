@@ -1,3 +1,6 @@
+var map = null; // set map clear
+var marker = null; // set icon of location marker clear
+
 
 $("#search-form").on('submit', function(event) {
     event.preventDefault();
@@ -8,6 +11,7 @@ $("#search-form").on('submit', function(event) {
 });
 
 document.getElementById("submit").addEventListener('click', function(event){
+        event.preventDefault();
     googleQuery();
     initMap();
     initLocalClocks(currentDate);
@@ -30,9 +34,9 @@ document.getElementById("groceryBar").addEventListener('click', function(event){
         document.getElementById("groceryDeck").classList.toggle('accordian-fold');
 });
 document.getElementById("gasBar").addEventListener('click', function(event){
-        document.getElementById("gasDeck").classList.toggle('accordian-fold');
+    console.log(event);
+        console.log ("bar touched");
+        document.getElementById("gasDeck").classList.toggle('collapse');
 });
 
-document.getElementById("newsBar").addEventListener('click', function(){
-    document.getElementBy('newsDeck').classList.toggle('accordian-fold');
-});
+

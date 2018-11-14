@@ -1,5 +1,4 @@
-var map = null; // set map clear
-var marker = null; // set icon of location marker clear
+
 var latitude = "";
 var longitude = "";
 var localPosition = "";
@@ -26,7 +25,6 @@ function initMap() {
     // CALL MAP, TIME, WEATHER, NEWS OF INPUT LOCATION
     geocodeAddress(geocoder, map);
   };
-
 
 function geocodeAddress(geocoder, resultsMap) {
 
