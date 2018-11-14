@@ -1,8 +1,13 @@
 
 $("#search-form").on('submit', function(event) {
     event.preventDefault();
-    cardWork();
+    googleQuery();
     document.getElementById('locationView').classList = ""; 
+});
+
+document.getElementById("submit").addEventListener('click', function(event){
+    googleQuery();
+    document.getElementById('locationView').classList = "";    
 });
 
 document.getElementById("hospitalBar").addEventListener('click', function(event){
