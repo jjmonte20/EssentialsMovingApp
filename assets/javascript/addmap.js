@@ -1,4 +1,5 @@
-
+var map = null; // set map clear
+var marker = null; // set icon of location marker clear
 var latitude = "";
 var longitude = "";
 var localPosition = "";
@@ -6,6 +7,26 @@ var localPosition = "";
 // Set the clock from user's local time
 var currentDate = new Date;
 initLocalClocks(currentDate);
+
+function initMap() {
+
+  map = new google.maps.Map(document.getElementById('map'), {   // CREATE GOOGLE MAP
+    zoom: 14,   // set zoom of map
+    center: {lat: 30.307182, lng: -97.755996} // with location of Austin Texas
+  });
+
+  var geocoder = new google.maps.Geocoder();
+
+  $("#search-form").on('submit', function(event) { // Information on Welcome Bar will change
+    if(marker != null) {            // check if there is any marker on map
+      marker.setMap(null);          // clear all markers on map
+      marker = null;                // set back marker is clear for new location
+    }
+    event.preventDefault();
+    // CALL MAP, TIME, WEATHER, NEWS OF INPUT LOCATION
+    geocodeAddress(geocoder, map);
+  });
+}
 
 function geocodeAddress(geocoder, resultsMap) {
 
