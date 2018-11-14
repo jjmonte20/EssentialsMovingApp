@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/clock.css">
 
-    <title>maptest</title>
+    <title>Essentals: what's in your area</title>
 
   </head>
 
@@ -26,8 +26,10 @@
 
     <nav id="navBar" class="navbar navbar-light bg-light">
       <a class="navbar-brand">Essentals - whats in your area</a>
+
       <form class="form-inline" id="search-form">
         <input id="inputLocation" class="form-control mr-sm-2" type="textbox" placeholder="Search" aria-label="Search" value="Austin, Texas">
+
         <input class="btn btn-outline-success my-2 my-sm-0" type="button" id="submit" value="Search">
       </form>
     </nav>
@@ -79,7 +81,7 @@
           <span id="btnHospital" class = "category-button">Hospitals</span>
         </div>
         <!-- start of deck-->
-        <div id = "hospitalDeck" class = "category-deck flex">
+        <div id = "hospitalDeck" class = "category-deck flex accordian accordian-fold">
           <!-- <div class = "location-card d-inline-block">
             <div class = "location-title text-center">
               <h4>Manchaca Post Office</h4>
@@ -98,7 +100,7 @@
             <span id="btnPostoffice" class = "category-button">Post Office</span>
           </div>
           <!-- start of deck -->
-          <div id = "postofficeDeck" class = "category-deck flex">
+          <div id = "postofficeDeck" class = "category-deck flex accordian  accordian-fold">
           </div><!--end Deck -->
       </div><!-- end category Card -->
 
@@ -109,7 +111,7 @@
             <span id="btnLibrary" class = "category-button">Library</span>
           </div>
           <!--start of deck-->
-          <div id = "libraryDeck" class = "category-deck flex">
+          <div id = "libraryDeck" class = "category-deck flex accordian  accordian-fold">
           </div><!--end Hispital Deck-->
       </div><!--end category Card-->
 
@@ -120,7 +122,7 @@
             <span id="btnGrocery" class = "category-button">Grocery</span>
           </div>
           <!--start of deck-->
-          <div id = "groceryDeck" class = "category-deck flex">
+          <div id = "groceryDeck" class = "category-deck flex accordian  accordian-fold">
           </div><!--end Hispital Deck-->
       </div><!--end category Card-->
       <!-- <div class="gasStations"></div> -->
@@ -131,10 +133,24 @@
             <span id="btnGas" class = "category-button">Gas Station</span>
           </div>
           <!--start of deck-->
-          <div id = "gasDeck" class = "category-deck flex">
+          <div id = "gasDeck" class = "category-deck flex accordian  accordian-fold">
           </div><!--end Hispital Deck -->
       </div> <!--end category Card -->
+
+      <!-- NEWS---------------------------------------------------------------------------->
+      <div class = "category-card">
+        <!-- <title bar for category -->
+        <div id = "newsBar" class = "category-bar">
+          <span id="btnNews" class = "category-button">News on .... </span>
+        </div>
+        <!--start of deck-->
+        <div id = "newsDeck" class = "category-deck flex accordian  accordian-fold">
+        </div><!--end Hispital Deck -->
+      </div> <!--end category Card -->
     </div>
+
+
+    <!-- JAVASCRIP ------------------------------------------------------------------------->
     <script type="text/javascript" src="assets/javascript/addmap.js"></script>
     <script type="text/javascript" src="requestHandler.js"></script>
     <script async defer
