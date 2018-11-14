@@ -72,7 +72,7 @@ function renderCard(category, searchInfo) {
 
         newCard.on
         ('click', function(event){
-            console.log("hey....");
+           googleTab(address);
         });
 
         newCard.append(newTitle,newAddress,newRating);
