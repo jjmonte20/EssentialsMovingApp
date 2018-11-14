@@ -2,13 +2,18 @@
 $("#search-form").on('submit', function(event) {
     event.preventDefault();
     googleQuery();
+    initMap();
+    initLocalClocks(currentDate);
     document.getElementById('locationView').classList = ""; 
 });
 
 document.getElementById("submit").addEventListener('click', function(event){
     googleQuery();
+    initMap();
+    initLocalClocks(currentDate);
     document.getElementById('locationView').classList = "";    
 });
+
 
 document.getElementById("hospitalBar").addEventListener('click', function(event){
         document.getElementById("hospitalDeck").classList.toggle('accordian-fold');

@@ -17,7 +17,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
 
-  $("#search-form").on('submit', function(event) { // Information on Welcome Bar will change
+  // $("#search-form").on('submit', function(event) { // Information on Welcome Bar will change
     if(marker != null) {            // check if there is any marker on map
       marker.setMap(null);          // clear all markers on map
       marker = null;                // set back marker is clear for new location
@@ -25,8 +25,8 @@ function initMap() {
     event.preventDefault();
     // CALL MAP, TIME, WEATHER, NEWS OF INPUT LOCATION
     geocodeAddress(geocoder, map);
-  });
-}
+  };
+
 
 function geocodeAddress(geocoder, resultsMap) {
 
