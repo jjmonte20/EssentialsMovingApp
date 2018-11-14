@@ -2,7 +2,7 @@ Working title: The Essentials Location App
 
 Team members: 
 Cody Davis: Front end, HTML/CSS
-Thuy Dihn: Back end  
+Thuy Dinh: Back end  
 Abraham Munoz: Back end
 Alex Stockton: Front end developer 
 Julian Montejano: Back end/ Github guru
