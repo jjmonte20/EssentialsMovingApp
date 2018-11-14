@@ -7,7 +7,8 @@ $("#search-form").on('submit', function(event) {
     googleQuery();
     initMap();
     initLocalClocks(currentDate);
-    document.getElementById('locationView').classList = ""; 
+    document.getElementById('locationView').classList = "";
+    document.getElementById('splashScreen').style.display = "none";
 });
 
 document.getElementById("submit").addEventListener('click', function(event){
@@ -15,7 +16,8 @@ document.getElementById("submit").addEventListener('click', function(event){
     googleQuery();
     initMap();
     initLocalClocks(currentDate);
-    document.getElementById('locationView').classList = "";    
+    document.getElementById('locationView').classList = "";
+    document.getElementById('splashScreen').style.display = "none";
 });
 
 
