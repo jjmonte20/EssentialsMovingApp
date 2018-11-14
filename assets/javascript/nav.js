@@ -3,16 +3,22 @@ $("#search-form").on('submit', function(event) {
     event.preventDefault();
     googleQuery();
     initMap();
+
+    initLocalClocks(currentDate);
     document.getElementById('locationView').classList = "";
-    document.getElementById('splashScreen').style.display="none";
+    document.getElementById('splashScreen').style.display = "none";
+
 });
 
 document.getElementById("submit").addEventListener('click', function(event){
-        event.preventDefault();
+    event.preventDefault();
     googleQuery();
     initMap();
+
+    initLocalClocks(currentDate);
     document.getElementById('locationView').classList = "";
-    document.getElementById('splashScreen').style.display="none";    
+    document.getElementById('splashScreen').style.display = "none";
+
 });
 
 
@@ -31,7 +37,9 @@ document.getElementById("groceryBar").addEventListener('click', function(event){
         document.getElementById("groceryDeck").classList.toggle('accordian-fold');
 });
 document.getElementById("gasBar").addEventListener('click', function(event){
-        document.getElementById("gasDeck").classList.toggle('accordian-fold');
+
+        document.getElementById("gasDeck").classList.toggle('collapse');
+
 });
 
 document.getElementById("newsBar").addEventListener('click', function(){

@@ -13,7 +13,7 @@ function renderCard(category, searchInfo) {
         let address = place.formatted_address;
         let name = place.name;
         let rating = place.rating;
-        let photoUrl = "https://via.placeholder.com/250";
+        let photoUrl = "./assets/images/qbkls.png";
         
         //creating card
         let newCard = $('<div>');
@@ -55,7 +55,7 @@ function renderCard(category, searchInfo) {
             });
         }
         else{
-            photoUrl = "https://via.placeholder.com/250";
+            photoUrl = "assets/images/noPhotoFound.png";
 
             newPhoto.attr("src", photoUrl);
             newTitle.append(newPhoto);
