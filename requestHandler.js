@@ -14,7 +14,6 @@ function renderCard(category, searchInfo) {
         let name = place.name;
         let rating = place.rating;
         let photoUrl = "https://via.placeholder.com/250";
-        let url = "";
         
         //creating card
         let newCard = $('<div>');
