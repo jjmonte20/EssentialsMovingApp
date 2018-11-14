@@ -110,7 +110,7 @@ function googleQuery(){
 
         //cutting the results to 5
         myResponse.length = 5;
-        console.log("Sending response to be rendered");
+        console.log("Sending gas response to be rendered");
         renderCard("gas", myResponse);
     });
 
