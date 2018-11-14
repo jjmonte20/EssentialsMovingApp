@@ -1,9 +1,8 @@
-var map = null; // set map clear
-var marker = null; // set icon of location marker clear
+
 var latitude = "";
 var longitude = "";
 var localPosition = "";
-
+var marker = null;
 // Set the clock from user's local time
 var currentDate = new Date;
 initLocalClocks(currentDate);
@@ -22,11 +21,10 @@ function initMap() {
       marker.setMap(null);          // clear all markers on map
       marker = null;                // set back marker is clear for new location
     }
-    event.preventDefault();
+    // event.preventDefault();
     // CALL MAP, TIME, WEATHER, NEWS OF INPUT LOCATION
     geocodeAddress(geocoder, map);
   };
-
 
 function geocodeAddress(geocoder, resultsMap) {
 
