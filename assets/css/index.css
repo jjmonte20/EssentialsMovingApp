@@ -64,7 +64,16 @@ h1 {
     max-width: 250px;
     background-color: #ddd;
 }
+.location-card h4{
+    max-lines: 2;
+    height: 60px;
+    overflow:hidden;
+}
 
+.location-card img{
+    height: 250px;
+    width: 250px;
+}
 .accordian{
     max-height: 9999px;
     transition: max-height .6s;

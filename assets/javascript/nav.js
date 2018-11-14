@@ -2,12 +2,15 @@
 $("#search-form").on('submit', function(event) {
     event.preventDefault();
     googleQuery();
-    document.getElementById('locationView').classList = ""; 
+    document.getElementById('locationView').classList = "";
+    document.getElementById('splashScreen').style.display="none";
 });
 
 document.getElementById("submit").addEventListener('click', function(event){
+        event.preventDefault();
     googleQuery();
-    document.getElementById('locationView').classList = "";    
+    document.getElementById('locationView').classList = "";
+    document.getElementById('splashScreen').style.display="none";    
 });
 
 document.getElementById("hospitalBar").addEventListener('click', function(event){
