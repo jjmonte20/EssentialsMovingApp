@@ -63,7 +63,18 @@ h1 {
     margin: 8px;
     max-width: 250px;
     background-color: #ddd;
+    cursor: pointer;
 }
+
+a{
+    cursor: pointer;
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}
+
 .location-card h4{
     max-lines: 2;
     height: 60px;
@@ -102,9 +113,16 @@ h1 {
 }
 
 @media only screen and (max-width: 500px) {
-    body {
-        min-width: 300px;
+
+    .navbar-brand {
+        text-align: center;
+        margin: auto;
     }
+
+    .form-inline, .btn-outline-success{
+        width: 100%;
+    }
+    
     .welcome-bar{
         display: flex;
         flex-direction: column;
@@ -112,9 +130,40 @@ h1 {
     .welcome-bar div{
         display: block;
     }
-    .welcome-map {
+
+    .clock{
         margin: auto;
     }
+
+    .timeZone, #timeZoneName{
+        text-align: center;
+        margin: auto;
+        margin-top: 1%;
+    }
+
+    .timeZone{
+        margin-top: 8px;
+    }
+
+    .weather, .wind, .humidity, .temp, .news, 
+    .newsTitle1, .newsTitle2, .newsTitle3{
+        text-align: center;
+        margin: auto;
+        margin-top: 1%;
+        
+    }
+
+    #map {
+        width: 100%;
+    }
+
+    .welcome-map {
+        margin: auto;
+        margin-right: 30px;
+    }
+
+
+
     .category-deck{
         display: flex;
         flex-wrap: wrap;
