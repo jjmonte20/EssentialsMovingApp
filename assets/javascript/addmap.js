@@ -55,7 +55,7 @@ function geocodeAddress(geocoder, resultsMap) {
       setTimeZone(localPosition); // get time zone ID, time zone name, and local time at inputLocation
 
     } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      console.log('Geocode was not successful for the following reason: ' + status);
     }
   });
 
