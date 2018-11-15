@@ -11,7 +11,7 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), {   // CREATE GOOGLE MAP
     zoom: 14,   // set zoom of map
-    center: {lat: 30.307182, lng: -97.755996} // with location of Austin Texas
+    //center: {lat: 30.307182, lng: -97.755996} // with location of Austin Texas
   });
 
   var geocoder = new google.maps.Geocoder();
@@ -55,7 +55,7 @@ function geocodeAddress(geocoder, resultsMap) {
       setTimeZone(localPosition); // get time zone ID, time zone name, and local time at inputLocation
 
     } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      console.log('Geocode was not successful for the following reason: ' + status);
     }
   });
 
