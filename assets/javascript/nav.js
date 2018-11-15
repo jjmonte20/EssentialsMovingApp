@@ -40,7 +40,3 @@ document.getElementById("gasBar").addEventListener('click', function(event){
         document.getElementById("gasDeck").classList.toggle('accordian-fold');
 
 });
-
-document.getElementById("newsBar").addEventListener('click', function(){
-    document.getElementBy('newsDeck').classList.toggle('accordian-fold');
-});
